@@ -95,7 +95,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message - start " sap:VirtualizedContainerService.HintSize="518,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;starting clear shopping cart&quot;]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser - Demoblaze" sap:VirtualizedContainerService.HintSize="518,1159" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="71135aca31f4f121781b8ebf37736687" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" BrowserType="Chrome" ContinueOnError="{x:Null}" DisplayName="Attach Browser - Demoblaze" sap:VirtualizedContainerService.HintSize="518,1159" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="71135aca31f4f121781b8ebf37736687" SearchScope="{x:Null}" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;" TimeoutMS="{x:Null}" UiBrowser="{x:Null}">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -110,7 +110,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="Click - Cart Menu" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="2000" DelayMS="2000" DisplayName="Click - Cart Menu" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="True" UnblockInput="{x:Null}">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -122,7 +122,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3e325c69-b97a-48eb-9a4a-69c7e476a832" InformativeScreenshot="7f43c109c7b601dbacdd2bf8befaf24f" Selector="&lt;webctrl id='cartur' tag='A' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3e325c69-b97a-48eb-9a4a-69c7e476a832" InformativeScreenshot="54513ed3ae6a0e046ddab30fb7f10298" Selector="&lt;webctrl aaname='Cart' parentid='navbarExample' tag='A' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -132,7 +132,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:UiElementExists DisplayName="Element Exists - Delete link" Exists="[hasProducts]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists ContinueOnError="{x:Null}" DisplayName="Element Exists - Delete link" Exists="[hasProducts]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1" Result="{x:Null}">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="87a94b7e-b7ec-4b3e-8aa3-a4e6d2944b57" InformativeScreenshot="23ba4351edb937d9ebbabe24e378b352" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='A' aaname='Delete' /&gt;" TimeoutMS="3000">
                   <ui:Target.WaitForReady>
@@ -141,7 +141,7 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[hasProducts]" DisplayName="While - Product exist in cart" sap:VirtualizedContainerService.HintSize="450,476" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile Condition="[hasProducts]" CurrentIndex="{x:Null}" DisplayName="While - Product exist in cart" sap:VirtualizedContainerService.HintSize="450,476" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="{x:Null}">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,329" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -149,7 +149,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2500" DisplayName="Click - Delete item" sap:VirtualizedContainerService.HintSize="382,139" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="2500" DisplayName="Click - Delete item" sap:VirtualizedContainerService.HintSize="382,139" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="True" UnblockInput="{x:Null}">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -171,7 +171,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <ui:UiElementExists DisplayName="Element Exists - Recheck delete button link" Exists="[hasProducts]" sap:VirtualizedContainerService.HintSize="382,130" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                  <ui:UiElementExists ContinueOnError="{x:Null}" DisplayName="Element Exists - Recheck delete button link" Exists="[hasProducts]" sap:VirtualizedContainerService.HintSize="382,130" sap2010:WorkflowViewState.IdRef="UiElementExists_2" Result="{x:Null}">
                     <ui:UiElementExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f14a7108-e490-4e9b-bb16-87c81334c413" InformativeScreenshot="23ba4351edb937d9ebbabe24e378b352" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='A' aaname='Delete' /&gt;" TimeoutMS="3000">
                         <ui:Target.WaitForReady>

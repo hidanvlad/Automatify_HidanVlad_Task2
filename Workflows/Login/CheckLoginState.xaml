@@ -91,7 +91,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CheckLoginState" sap:VirtualizedContainerService.HintSize="817,1737" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CheckLoginState" sap:VirtualizedContainerService.HintSize="771,1737" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>

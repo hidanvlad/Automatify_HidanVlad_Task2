@@ -71,13 +71,13 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SendConfirmationEmail" sap:VirtualizedContainerService.HintSize="834,598.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SendConfirmationEmail" sap:VirtualizedContainerService.HintSize="788,412.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="Salutare, robotul a finalizat cu succes procesarea comenzilor din Excel pe platforma Demoblaze. Găsești atașată confirmarea plasării comenzii." ConnectionMode="Undefined" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="Confirmare Comanda Realizata" To="hidan.vladpetru@gmail.com" UseISConnection="False">
+    <ui:SendOutlookMail Account="{x:Null}" AttachmentsCollection="{x:Null}" Bcc="{x:Null}" Body="Salutare, robotul a finalizat cu succes procesarea comenzilor din Excel pe platforma Demoblaze. Găsești atașată confirmarea plasării comenzii." Cc="{x:Null}" ConnectionMode="LegacyConfiguration" ContinueOnError="{x:Null}" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" MailMessage="{x:Null}" ReplyTo="{x:Null}" Sensitivity="Normal" SentOnBehalfOfName="{x:Null}" Subject="Confirmare Comanda Realizata" TimeoutMS="{x:Null}" To="vlad.hidan@stud.ubbcluj.ro" UseISConnection="False">
       <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
         <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
           <usau:BackupSlot.BackupValues>
@@ -87,9 +87,7 @@
       </ui:SendOutlookMail.ConnectionDetailsBackupSlot>
       <ui:SendOutlookMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-          <InArgument x:TypeArguments="x:String">
-            <Literal x:TypeArguments="x:String">Data\ConfirmareComanda.png</Literal>
-          </InArgument>
+          <InArgument x:TypeArguments="x:String">Data\ConfirmareComanda.png</InArgument>
         </scg:List>
       </ui:SendOutlookMail.Files>
     </ui:SendOutlookMail>

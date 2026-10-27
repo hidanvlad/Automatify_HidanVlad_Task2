@@ -91,7 +91,7 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="817,1746" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="755,1746" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -124,7 +124,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b03265d0-cc91-4cbb-b1c3-97c5758d6fcd" InformativeScreenshot="7feb72d15541e0afaa8940092b429c30" Selector="&lt;webctrl tag='A' aaname='Log in' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b03265d0-cc91-4cbb-b1c3-97c5758d6fcd" InformativeScreenshot="7feb72d15541e0afaa8940092b429c30" Selector="&lt;webctrl id='login2' tag='A' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -136,7 +136,7 @@
             </ui:Click>
             <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="1000" DisplayName="Type Into - Username" EmptyField="True" sap:VirtualizedContainerService.HintSize="450,188" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_userName]">
               <ui:TypeInto.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="906753f3-3005-42e2-8791-e5b37e3b6b47" InformativeScreenshot="8ce7ede6d0b5e3a78eface6158103563" Selector="&lt;webctrl id='loginusername' tag='INPUT' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="906753f3-3005-42e2-8791-e5b37e3b6b47" InformativeScreenshot="c57b2a771a09b79e2809ba0bc3d3bd36" Selector="&lt;webctrl id='loginusername' tag='INPUT' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
