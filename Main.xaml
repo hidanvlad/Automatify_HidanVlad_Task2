@@ -98,7 +98,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="817,2737" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="771,2737" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_PurchaseOrder" />
       <Variable x:TypeArguments="x:String" Name="userName" />
@@ -111,15 +111,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_PurchaseOrder]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="619,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Data\PO.xlsx">
+    <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_PurchaseOrder]" DisplayName="Read Range Workbook - PO Excel" sap:VirtualizedContainerService.HintSize="619,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Data\PO.xlsx">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <p:RequestCredential Message="{x:Null}" Password="{x:Null}" Title="{x:Null}" DisplayName="Request Credentials" sap:VirtualizedContainerService.HintSize="619,57" sap2010:WorkflowViewState.IdRef="RequestCredential_1" PasswordSecureString="[password]" Username="[userName]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="619,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Userul introdus este: &quot; + userName]" />
+    <p:RequestCredential Message="{x:Null}" Password="{x:Null}" Title="{x:Null}" DisplayName="Request Credentials - Demoblaze Login" sap:VirtualizedContainerService.HintSize="619,57" sap2010:WorkflowViewState.IdRef="RequestCredential_1" PasswordSecureString="[password]" Username="[userName]" />
+    <ui:LogMessage DisplayName="Log Message - check which user is logged" sap:VirtualizedContainerService.HintSize="619,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Userul introdus este: &quot; + userName]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckLoginState - Invoke Workflow File (Workflows\Login\CheckLoginState.xaml)" sap:VirtualizedContainerService.HintSize="619,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Login\CheckLoginState.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_userName">[userName]</InArgument>
@@ -158,7 +158,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,273" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                  <ui:MultipleAssign DisplayName="Multiple Assign - Map Excel Columns to Variables" sap:VirtualizedContainerService.HintSize="479,273" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                     <ui:MultipleAssign.AssignOperations>
                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">

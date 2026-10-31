@@ -247,7 +247,7 @@
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
     <ui:AddDataColumn x:TypeArguments="x:Int32" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="NumericPrice" DataTable="[dtAllProducts]" DisplayName="Add Data Column - Numeric Price" sap:VirtualizedContainerService.HintSize="547,221" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="NameLower" DataTable="[dtAllProducts]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="547,221" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="NameLower" DataTable="[dtAllProducts]" DisplayName="Add Data Column - NameLower" sap:VirtualizedContainerService.HintSize="547,221" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
     <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtAllProducts]" DisplayName="For Each Row _ Clean Prices" sap:VirtualizedContainerService.HintSize="547,479" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
@@ -280,7 +280,7 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <Assign sap:VirtualizedContainerService.HintSize="547,115" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign DisplayName="Assign - TargetBrand to Lowercase" sap:VirtualizedContainerService.HintSize="547,115" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[in_targetBrand]</OutArgument>
       </Assign.To>

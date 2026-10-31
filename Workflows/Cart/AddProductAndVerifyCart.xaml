@@ -108,7 +108,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddProductAndVerifyCart" sap:VirtualizedContainerService.HintSize="817,2796" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddProductAndVerifyCart" sap:VirtualizedContainerService.HintSize="771,2796" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="isProductInCart" />
     </Sequence.Variables>
@@ -155,7 +155,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="450,818" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="[in_Qty]" StartAt="1">
+            <ui:RepeatNumberOfTimesX DisplayName="Repeat -  Add Product based on Qty" sap:VirtualizedContainerService.HintSize="450,818" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="[in_Qty]" StartAt="1">
               <ui:RepeatNumberOfTimesX.Body>
                 <ActivityAction x:TypeArguments="x:Int32">
                   <ActivityAction.Argument>
