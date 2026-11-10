@@ -91,13 +91,14 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="755,1746" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="817,2096" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser - Demoblaze" sap:VirtualizedContainerService.HintSize="518,1723" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0a37f269c3341f3115274e17461dc16c" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
+    <ui:LogMessage DisplayName="Log Message - start of file" sap:VirtualizedContainerService.HintSize="518,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Start Login&quot;]" />
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser - Demoblaze" sap:VirtualizedContainerService.HintSize="518,1732" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0a37f269c3341f3115274e17461dc16c" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -124,7 +125,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b03265d0-cc91-4cbb-b1c3-97c5758d6fcd" InformativeScreenshot="7feb72d15541e0afaa8940092b429c30" Selector="&lt;webctrl id='login2' tag='A' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b03265d0-cc91-4cbb-b1c3-97c5758d6fcd" InformativeScreenshot="7feb72d15541e0afaa8940092b429c30" Selector="&lt;webctrl tag='A' aaname='Log in' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -179,7 +180,7 @@
             </ui:Click>
             <ui:UiElementExists DisplayName="Element Exists - Login Error Alert" Exists="[hasLoginError]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c43cc7b3-1c66-41a8-9f0f-bdc9bbdb401b" InformativeScreenshot="125da76e5fc25ab09bd0757ccedaec29" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='STORE - Google Chrome' /&gt;&lt;ctrl name='*demoblaze.com*' role='dialog' /&gt;" TimeoutMS="3000">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c43cc7b3-1c66-41a8-9f0f-bdc9bbdb401b" InformativeScreenshot="125da76e5fc25ab09bd0757ccedaec29" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Google Chrome' /&gt;&lt;ctrl name='*demoblaze.com*' role='dialog' /&gt;" TimeoutMS="3000">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>
@@ -224,5 +225,6 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
+    <ui:LogMessage DisplayName="Log Message - end of file" sap:VirtualizedContainerService.HintSize="518,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Final login file&quot;]" />
   </Sequence>
 </Activity>

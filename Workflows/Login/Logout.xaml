@@ -81,19 +81,20 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Logout" sap:VirtualizedContainerService.HintSize="817,1212" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Logout" sap:VirtualizedContainerService.HintSize="817,1423" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser - Demoblaze" sap:VirtualizedContainerService.HintSize="518,1189" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="65e688db68031569f36e1324be712ec4" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
+    <ui:LogMessage DisplayName="Log Message - start of file" sap:VirtualizedContainerService.HintSize="518,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Start Logout&quot;]" />
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser - Demoblaze" sap:VirtualizedContainerService.HintSize="518,1059" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="65e688db68031569f36e1324be712ec4" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,1019" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,880" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="isLoggedOut" />
               <Variable x:TypeArguments="x:String" Name="welcomeAfterLogout" />
@@ -137,18 +138,6 @@
                 <OutArgument x:TypeArguments="x:String">[welcomeAfterLogout]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <ui:UiElementExists DisplayName="Element Exists - Login Button" Exists="[isLoggedOut]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
-              <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="95387222-ca94-42a8-a9e0-6919dab406ab" InformativeScreenshot="7feb72d15541e0afaa8940092b429c30" Selector="&lt;webctrl tag='A' aaname='Log in' visible='1' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:UiElementExists.Target>
-            </ui:UiElementExists>
             <If Condition="[String.IsNullOrWhiteSpace(welcomeAfterLogout)]" DisplayName="If - Verify Log out succes" sap:VirtualizedContainerService.HintSize="450,562" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,226" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -175,5 +164,6 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
+    <ui:LogMessage DisplayName="Log Message - end of file" sap:VirtualizedContainerService.HintSize="518,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;End of Logout file&quot;]" />
   </Sequence>
 </Activity>

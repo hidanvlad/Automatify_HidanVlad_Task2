@@ -32,6 +32,8 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -69,15 +71,29 @@
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SendConfirmationEmail" sap:VirtualizedContainerService.HintSize="788,412.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SendConfirmationEmail" sap:VirtualizedContainerService.HintSize="817,549" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:SendOutlookMail Account="{x:Null}" AttachmentsCollection="{x:Null}" Bcc="{x:Null}" Body="Salutare, robotul a finalizat cu succes procesarea comenzilor din Excel pe platforma Demoblaze. Găsești atașată confirmarea plasării comenzii." Cc="{x:Null}" ConnectionMode="LegacyConfiguration" ContinueOnError="{x:Null}" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" MailMessage="{x:Null}" ReplyTo="{x:Null}" Sensitivity="Normal" SentOnBehalfOfName="{x:Null}" Subject="Confirmare Comanda Realizata" TimeoutMS="{x:Null}" To="vlad.hidan@stud.ubbcluj.ro" UseISConnection="False">
+    <ui:LogMessage DisplayName="Log Message - start of file" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start send confirmation email&quot;]" />
+    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="Salutare, robotul a finalizat cu succes procesarea comenzilor din Excel pe platforma Demoblaze. Găsești atașată confirmarea plasării comenzii." ConnectionMode="LegacyConfiguration" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="Confirmare Comanda Realizata" To="vlad.hidan@stud.ubbcluj.ro" UseISConnection="False">
       <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
         <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
           <usau:BackupSlot.BackupValues>
@@ -91,5 +107,6 @@
         </scg:List>
       </ui:SendOutlookMail.Files>
     </ui:SendOutlookMail>
+    <ui:LogMessage DisplayName="Log Message -end of file" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;End Send confirmation email&quot;]" />
   </Sequence>
 </Activity>

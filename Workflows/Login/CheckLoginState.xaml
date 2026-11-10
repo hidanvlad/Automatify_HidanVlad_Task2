@@ -91,19 +91,20 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CheckLoginState" sap:VirtualizedContainerService.HintSize="771,1737" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CheckLoginState" sap:VirtualizedContainerService.HintSize="817,1964" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser - Demoblaze" sap:VirtualizedContainerService.HintSize="586,1714" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.demoblaze.com/index.html">
+    <ui:LogMessage DisplayName="Log Message - start of file" sap:VirtualizedContainerService.HintSize="586,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Start Check login state&quot;]" />
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser - Demoblaze" sap:VirtualizedContainerService.HintSize="586,1600" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.demoblaze.com/index.html">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,1565" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,1442" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="isUserLoggedIn" />
               <Variable x:TypeArguments="x:String" Name="textWelcome" />
@@ -113,16 +114,12 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Delay DisplayName="Delay - Wait For Sesion Load" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="518,123" sap2010:WorkflowViewState.IdRef="Delay_1" />
             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text - Welcome User" sap:VirtualizedContainerService.HintSize="518,139" sap2010:WorkflowViewState.IdRef="GetValue_1">
               <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f984b5c5-58ae-44ec-b157-6852341c16f5" InformativeScreenshot="82cd0c99e9a89a72ced62a6d52d117e3" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl id='nameofuser' tag='A' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f984b5c5-58ae-44ec-b157-6852341c16f5" InformativeScreenshot="82cd0c99e9a89a72ced62a6d52d117e3" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl id='nameofuser' tag='A' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
                 </ui:Target>
               </ui:GetValue.Target>
               <ui:GetValue.Value>
@@ -191,5 +188,6 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
+    <ui:LogMessage DisplayName="Log Message -End of file" sap:VirtualizedContainerService.HintSize="586,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;End CheckLoginState file&quot;]" />
   </Sequence>
 </Activity>
